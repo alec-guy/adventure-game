@@ -1,0 +1,15 @@
+Obejective 1: Game-world
+create a game world: 
+crate a map of interconnected rooms. 
+Rooms can have descriptions, items, and exits. 
+
+Objective 2. Player interaction 
+move between rooms 
+pick up and drop items 
+view their inventory 
+
+Objective 3: Kepp track of 
+   The player's location
+   Items in rooms 
+   and player's inventory 
+BAsic storyline : Find key and unlock door
