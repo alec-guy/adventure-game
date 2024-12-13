@@ -15,10 +15,10 @@ stdenv.mkDerivation rec {
     owner = "alec-guy";
     repo  = "adventure-game";
     rev  = "WOW";
-    sha256 = "...";  # Replace with actual sha256 hash after running nix-build once
+    sha256 = "0qpn3dih1jpiy4nrg1260vb87wqjjrxfr6jl7sd3mjbxb5mxgwrg";  # Replace with actual sha256 hash after running nix-build once
   };
   
-  buildInputs = [haskellPackages.cabal-install haskellPackages.GLUT];
+  buildInputs = [haskellPackages.cabal-install haskellPackages.GLUT haskellPackages.ghc];
 
   buildPhase = "cabal build";
 
