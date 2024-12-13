@@ -1,5 +1,5 @@
 {
-    stdenv, haskell, fetchFromGitHub, pkgs
+    stdenv, haskellPackages, fetchFromGitHub, pkgs
 }:
 
 stdenv.mkDerivation rec {
@@ -12,9 +12,9 @@ stdenv.mkDerivation rec {
         sha256 = ""; 
 
     };
-    buildInputs = [haskell.compiler.ghc910]; 
-    
-    buildPhase = "cabal build\n" + "cabal run"
+    buildInputs = [haskell.compiler.ghc910 haskellPackages.cabal-install]; 
+
+    buildPhase = "cabal build" 
     installPhase = 
             "mkdir -p $out/bin" + 
                     "cp -r dist/build/adventure-game/adventure-game $out/bin/";
