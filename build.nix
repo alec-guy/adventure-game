@@ -17,7 +17,7 @@ stdenv.mkDerivation rec {
     buildPhase = "cabal build" 
     installPhase = 
             "mkdir -p $out/bin" + 
-                    "cp -r ./dist-newstyle/build/adventure-game/ $out/bin/";
+            "cabal run | $out/bin/";
 
     shellHook = "echo \"Installation complete.\"";
 
