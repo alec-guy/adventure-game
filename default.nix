@@ -1,3 +1,7 @@
-{ pkgs ? import (builtins.fetchTarball "https://github.com/NixOS/nix/archive/refs/tags/2.25.3.tar.gz") {}}: 
-
+let 
+pkgs = import (builtins.fetchTarball {
+    url = "https://github.com/NixOS/nixpkgs/archive/refs/tags/24.05.tar.gz"; 
+    sha256 = "1lr1h35prqkd1mkmzriwlpvxcb34kmhc9dnr48gkm8hh089hifmx";
+    }) {};
+in 
 pkgs.callPackage ./adventure-game {}

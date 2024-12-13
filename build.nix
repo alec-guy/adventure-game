@@ -12,7 +12,7 @@ stdenv.mkDerivation rec {
         sha256 = ""; 
 
     };
-    buildInputs = [haskell.compiler.ghc910 haskellPackages.cabal-install]; 
+    buildInputs = [haskell.compiler.ghc910 haskellPackages.cabal-install haskellPackages.GLUT]; 
 
     buildPhase = "cabal build" 
     installPhase = 
