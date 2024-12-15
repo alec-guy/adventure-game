@@ -1,1 +1,4 @@
 dist-newstyle
+!flake.nix 
+!flake.lock
+/result
